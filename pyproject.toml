@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-fund-nav"
+version = "0.1.0"
+description = "MCP server for querying Chinese mutual fund NAV from AI agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["mcp>=1.0", "httpx>=0.27"]
+
+[project.scripts]
+mcp-fund-nav = "mcp_fund_nav.server:main"
+
+[tool.setuptools.packages.find]
+include = ["mcp_fund_nav*"]
